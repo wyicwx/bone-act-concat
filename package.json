@@ -1,0 +1,34 @@
+{
+  "name": "bone-concat",
+  "version": "0.0.3",
+  "description": "concat compiler for bone",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make"
+  },
+  "keywords": [
+    "concat",
+    "bone-concat"
+  ],
+  "config": {
+    "blanket": {
+      "pattern": "bone-concat/lib"
+    }
+  },
+  "author": {
+    "name": "wyicwx",
+    "email": "wyicwx@gmail.com",
+    "web": "http://weibo.com/simplemaple"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wyicwx/bone-concat.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "akostream": "0.0.2"
+  }
+}
