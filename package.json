@@ -1,5 +1,5 @@
 {
-  "name": "bone-concat",
+  "name": "bone-act-concat",
   "version": "0.0.7",
   "description": "concat compiler for bone",
   "main": "index.js",
