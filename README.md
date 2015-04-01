@@ -1,4 +1,4 @@
-# bone-concat
+# bone-act-concat
 > bone的合并文件处理器
 
 ### 安装及使用
@@ -6,14 +6,14 @@
 通过npm安装
 
 ```sh
-$ npm install bone-concat 
+$ npm install bone-act-concat 
 ```
 
 安装后在`bonefile.js`文件内通过`act()`加载
 
 ```js
 var bone = require('bone');
-var concat = require('bone-concat');
+var concat = require('bone-act-concat');
 
 bone.dest('dist')
 	.src('~/src/main.js')
