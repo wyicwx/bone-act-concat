@@ -41,10 +41,12 @@ type: `string`、`array`  default: []
 ```js
 bone.dest('dist')
 	.src('~/src/main.js')
-	.act(concat([
-		'~/src/main.js',
-		'~/src/lib/jquery.js'
-	]));
+	.act(concat({
+		files: [
+			'~/src/main.js',
+			'~/src/lib/jquery.js'
+		]
+	}));
 ```
 
 注：不指定files则不合并任何文件

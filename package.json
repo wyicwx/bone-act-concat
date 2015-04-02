@@ -1,7 +1,7 @@
 {
   "name": "bone-act-concat",
   "version": "0.0.7",
-  "description": "concat compiler for bone",
+  "description": "concat file plugin for bone",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -11,11 +11,11 @@
   },
   "keywords": [
     "concat",
-    "bone-concat"
+    "bone-act-concat"
   ],
   "config": {
     "blanket": {
-      "pattern": "bone-concat/lib"
+      "pattern": "bone-act-concat/lib"
     }
   },
   "author": {
@@ -30,5 +30,11 @@
   "license": "MIT",
   "dependencies": {
     "akostream": "0.0.2"
+  },
+  "devDependencies": {
+    "blanket": "*",
+    "bone": "0.0.18",
+    "istanbul": "~0.3.2",
+    "mocha": "*"
   }
 }
