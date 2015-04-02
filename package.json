@@ -3,11 +3,9 @@
   "version": "0.0.7",
   "description": "concat file plugin for bone",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "make"
+    "test": "make",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/"
   },
   "keywords": [
     "concat",
