@@ -26,9 +26,6 @@
     "url": "https://github.com/wyicwx/bone-concat.git"
   },
   "license": "MIT",
-  "dependencies": {
-    "akostream": "0.0.2"
-  },
   "devDependencies": {
     "blanket": "*",
     "bone": "0.0.18",
