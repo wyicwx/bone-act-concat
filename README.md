@@ -1,6 +1,8 @@
 # bone-act-concat
 > bone的合并文件处理器
 
+[![travis](https://api.travis-ci.org/wyicwx/bone-act-concat.png)](https://travis-ci.org/wyicwx/bone-act-concat) [![Coverage Status](https://coveralls.io/repos/wyicwx/bone-act-concat/badge.png?branch=master)](https://coveralls.io/r/wyicwx/bone-act-concat?branch=master)
+
 ### 安装及使用
 
 通过npm安装
