@@ -59,6 +59,43 @@ dist.src('~/raw/a.js')
 	.rename('a-invalid.js');
 
 
+dist.src('~/raw/a.js')
+	.act(concat({
+		files: [
+			'~/raw/a.js',
+			'~/raw/b.js'
+		],
+	}))
+	.rename('a-config-self.js');
+
+dist.src('~/raw/a.js')
+	.act(concat({
+		files: [
+			'__self__',
+			'~/raw/b.js'
+		]
+	}))
+	.rename('a-self-first.js');
+
+dist.src('~/raw/a.js')
+	.act(concat({
+		files: [
+			'~/raw/c.js',
+			'__self__',
+			'~/raw/b.js'
+		]
+	}))
+	.rename('a-self-arbitary.js');
+
+dist.src('~/raw/a.js')
+	.act(concat({
+		files: [
+			'~/raw/b.js',
+			'__self__'
+		]
+	}))
+	.rename('a-self-last.js');
+
 bone.setup('./test/');
 
 describe('bone-act-concat', function() {
@@ -174,5 +211,64 @@ describe('bone-act-concat', function() {
 		});
 	});
 
+	it('config self', function(done) {
+		bone.fs.readFile('~/dist/a-config-self.js', function(err, buffer) {
+			if(err) {
+				return done(false);
+			}
+
+			var ctx = buffer.toString();
+			if(ctx === 'a\r\nb') {
+				done();
+			} else {
+				done(false);
+			}
+		});
+	});
+
+	it('self first', function(done) {
+		bone.fs.readFile('~/dist/a-self-first.js', function(err, buffer) {
+			if(err) {
+				return done(false);
+			}
+
+			var ctx = buffer.toString();
+			if(ctx === 'a\r\nb') {
+				done();
+			} else {
+				done(false);
+			}
+		});
+	});
+
+	it('self arbitary', function(done) {
+		bone.fs.readFile('~/dist/a-self-arbitary.js', function(err, buffer) {
+			if(err) {
+				return done(false);
+			}
+
+			var ctx = buffer.toString();
+			if(ctx === 'c\r\na\r\nb') {
+				done();
+			} else {
+				done(false);
+			}
+		});
+	});
+
+	it('self last', function(done) {
+		bone.fs.readFile('~/dist/a-self-last.js', function(err, buffer) {
+			if(err) {
+				return done(false);
+			}
+
+			var ctx = buffer.toString();
+			if(ctx === 'b\r\na') {
+				done();
+			} else {
+				done(false);
+			}
+		});
+	});
 
 });
