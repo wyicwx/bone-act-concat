@@ -50,6 +50,17 @@ bone.dest('dist')
 		]
 	}));
 ```
+支持用户配置源文件位置
+```js
+bone.dest('dist')
+    .src('~/src/*.js')
+    .concat({
+        files: [
+            '~/src/lib/jquery.js',
+            '__self__'
+        ]
+    });
+```
 
 注：不指定files则不合并任何文件
 
