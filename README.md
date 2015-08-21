@@ -59,7 +59,7 @@ bone.dest('dist')
             '~/src/lib/jquery.js',
             '__self__'
         ]
-    })
+    });
 ```
 
 注：不指定files则不合并任何文件
