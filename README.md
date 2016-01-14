@@ -15,16 +15,8 @@ $ npm install bone-act-concat
 
 ```js
 var bone = require('bone');
-var concat = require('bone-act-concat');
+var concat = bone.require('bone-act-concat');
 
-bone.dest('dist')
-	.src('~/src/main.js')
-	.act(concat);
-```
-
-传递参数的调用方法
-
-```js
 bone.dest('dist')
 	.src('~/src/main.js')
 	.act(concat({
