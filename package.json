@@ -1,6 +1,6 @@
 {
   "name": "bone-act-concat",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "concat file plugin for bone",
   "main": "index.js",
   "scripts": {
